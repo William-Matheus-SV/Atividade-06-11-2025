@@ -20,6 +20,10 @@ form {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     overflow: hidden;
     padding: 30px 40px;
+    transition: transform 0.3s ease;
+}
+form:hover {
+    transform:scale(1.02);
 }
 header {
     text-align: center;
@@ -29,7 +33,6 @@ header {
 }
 .campos {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 15px;
 }
 label {
@@ -37,6 +40,7 @@ label {
     color: #333;
 }
 input[type="number"],
+input[readonly],
 select{
     width: 100%;
     padding: 10px 15px;
@@ -63,4 +67,15 @@ button {
 }
 button:hover {
     background-color: #5A9BD6;
+}
+#resultado {
+    background-color: #eef7ff;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#resultado.flash {
+    background-color: #b3e5fc;
 }

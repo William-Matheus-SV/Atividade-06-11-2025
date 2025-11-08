@@ -3,8 +3,8 @@ const form = document.querySelector("form");
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const num1= parseFloat(document.getElementById("numero").value);
-    const num2= parseFloat(document.getElementById("numerodois").value);
+    const num1 = parseFloat(document.getElementById("numero").value);
+    const num2 = parseFloat(document.getElementById("numerodois").value);
     const operacao = document.getElementById("operacao").value;
     const resultadoCampo = document.getElementById("resultado");
 
@@ -33,8 +33,13 @@ form.addEventListener("submit", function(event) {
             resultado = num1 / num2;
             break;
         default:
-                alert("Selecione uma operação válida.");
-                return;        
+            alert("Selecione uma operação válida.");
+            return;        
     }
     resultadoCampo.value = resultado;
+
+    // Efeito visual ao mostrar o resultado
+    resultadoCampo.classList.add("flash");
+    setTimeout(() => resultadoCampo.classList.remove("flash"), 300);
+
 });
