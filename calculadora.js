@@ -16,16 +16,16 @@ form.addEventListener("submit", function(event) {
         return;
     }
     switch (operacao) {
-        case "Adicao":
+        case "adicao":
             resultado = num1 + num2;
             break;
-        case "Subtracao":
+        case "subtracao":
             resultado = num1 - num2;
             break;
-        case "Multiplicacao":
+        case "multiplicacao":
             resultado = num1 * num2;
             break;
-        case "Divisao":
+        case "divisao":
             if( num2 == 0){
                 alert("Não é possivel dividir por zero");
                 return;
@@ -38,4 +38,3 @@ form.addEventListener("submit", function(event) {
     }
     resultadoCampo.value = resultado;
 });
-
