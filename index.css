@@ -78,4 +78,5 @@ button:hover {
 
 #resultado.flash {
     background-color: #b3e5fc;
+    transition: background-color 0.3s;
 }

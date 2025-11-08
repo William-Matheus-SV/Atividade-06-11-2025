@@ -38,6 +38,11 @@ form.addEventListener("submit", function(event) {
     }
     resultadoCampo.value = resultado;
 
+    // Exibir resultado com vírgula (formato brasileiro)
+    resultadoCampo.value = resultado.toLocaleString("pt-BR", { 
+    minimumFractionDigits: 2, 
+    maximumFractionDigits: 4 
+});
     // Efeito visual ao mostrar o resultado
     resultadoCampo.classList.add("flash");
     setTimeout(() => resultadoCampo.classList.remove("flash"), 300);
